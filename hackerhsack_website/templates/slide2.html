@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %} Rëndësia e Përdorimit të Sistemit të Sigurisë {% endblock %}
+{% load static %}
+{% block content %}
+
+<style>
+    body {
+        background-color: #DEEFFA; 
+        font-family: "Arial", sans-serif;
+    }
+
+    .content-wrapper {
+        background-color: white; 
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 900px;
+        margin: 40px auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    .content-image {
+        display: block;
+        margin: 30px auto;
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-text {
+        text-align: justify;
+        line-height: 1.8;
+        font-size: 18px;
+        color: #2c3e50;
+        margin: 20px 0;
+    }
+
+    .content-list {
+        padding-left: 25px;
+    }
+
+    .content-list li {
+        margin-bottom: 15px;
+    }
+
+    /* Decorative Asterisk */
+    .decorative-symbol {
+        text-align: center;
+        font-size: 28px;
+        color: #6c757d;
+        margin-top: 50px;
+    }
+
+</style>
+
+<!-- Main Content -->
+<div class="content-wrapper">
+    <h1>Rëndësia e Përdorimit të Sistemit të Sigurisë 24/7</h1>
+
+    <!-- Image -->
+    <img src="{% static 'img/slide22.webp' %}" alt="Sistemet e Sigurisë 24/7" class="content-image">
+
+    <!-- Content -->
+    <div class="content-text">
+        <ol class="content-list">
+            <li><strong>Përhapja e kamerave të sigurisë:</strong> Në botë ka mbi 1 miliard kamera sigurie. Londra është një nga qytetet më të mbikëqyrura me mbi 500,000 kamera aktive.</li>
+
+            <li><strong>Sistemet e sigurisë ulin krimet:</strong> Sipas studimeve, kamerat e sigurisë mund të zvogëlojnë numrin e krimeve deri në 50%, duke ofruar mbikëqyrje të vazhdueshme.</li>
+
+            <li><strong>Siguria në vendin e punës:</strong> Rreth 60% e punonjësve ndihen më të sigurt kur ambientet janë të pajisura me sisteme sigurie të monitoruara.</li>
+
+            <li><strong>Kamerat ndihmojnë në hetime:</strong> Videot e sigurisë kanë ndihmuar në zgjidhjen e shumë rasteve kriminale duke ofruar prova kyçe.</li>
+
+            <li><strong>Teknologjia moderne e sigurisë:</strong> Inteligjenca artificiale identifikon lëvizjet e dyshimta në kohë reale, duke mundësuar një reagim më të shpejtë.</li>
+
+            <li><strong>Siguria e automjeteve:</strong> Alarmet dhe sistemet GPS zvogëlojnë rrezikun e vjedhjes së makinave. Sipas statistikave, makinat me sistem alarmi janë 5 herë më të sigurta.</li>
+
+            <li><strong>Aeroportet & siguria:</strong> Aeroportet janë ndër vendet më të mbikëqyrura në botë, duke përdorur teknologji të avancuara për të mbrojtur pasagjerët.</li>
+
+            <li><strong>Investimi në siguri kursen para:</strong> Bizneset që investojnë në sisteme sigurie shmangin dëmet dhe humbjet e mëdha financiare.</li>
+        </ol>
+    </div>
+
+    <!-- Decorative Symbol -->
+    <p class="decorative-symbol">❋</p>
+</div>
+
+
+
+{% endblock %}

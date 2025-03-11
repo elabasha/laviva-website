@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+{% block title %} Produkte-sherbime {% endblock %}
+
+{% block content %} 
+
+
+<style>
+    body {
+        background-color: #C8DBE5;
+    }
+
+    .content-wrapper {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .category {
+        background-color: #C1D8E4;
+        padding: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .category:hover {
+        background-color: #A1B6C6;
+    }
+
+    .card-body {
+        padding: 40px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        color: #02097c !important; /* Same color as the title */
+        font-weight: bold;
+    }
+    
+
+    .card {
+        border: none;
+        border-radius: 8px;
+        background-color: #EAF3FA;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 100px; /* Increase space above the header */
+        margin-bottom: 50px; /* Increase space below the header */
+        color: #004080;
+    }
+
+    .content-wrapper {
+        margin-top: 50px; /* Add more space before the table */
+        margin-bottom: 200px; /* Add more space after the table */
+    }
+</style>
+
+
+<h1>Produkte & Sherbime</h1>
+
+<main class="content-wrapper container my-5">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Categories -->
+        <div class="col">
+            <a href="{% url 'sisteme_sigurie' %}" class="card text-center text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title">Sisteme Sigurie</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% url 'sisteme_hvac' %}" class="card text-center text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title">Sisteme HVAC</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% url 'sistem_parkimi' %}" class="card text-center text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title">Menaxhimi i automatizuar i parkimit</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% url 'sistem_elektrik' %}" class="card text-center text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title">Sisteme Elektrike</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% url 'sistem_elektronik' %}" class="card text-center text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title">Network dhe Sisteme Komunikimi</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% url 'zgjidhje_dixhitale' %}" class="card text-center text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title">Zgjidhje Dixhitale</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% url 'sisteme_menaxhimit_ndertesave' %}" class="card text-center text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title">Sisteme i menaxhimit të ndërtesave</h5>
+                </div>
+            </a>
+        </div>
+        <div class="col">
+            <a href="{% url 'sistem_energji' %}" class="card text-center text-decoration-none">
+                <div class="card-body">
+                    <h5 class="card-title">Sisteme furnizimi të energjisë të pandërprerë</h5>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+</div>
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-4">Laviva Technologies</h3>
+        <p><strong>Kontakt:</strong></p>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+
+
+{% endblock%}

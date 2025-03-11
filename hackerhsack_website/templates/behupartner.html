@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Behu Partner - Under Maintenance {% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #e0e7ff; /* Light blue background */
+    }
+
+    .maintenance-container {
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    .maintenance-container img {
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .maintenance-title {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #1e40af;
+        margin-top: 20px;
+    }
+
+    .maintenance-text {
+        font-size: 1.5rem;
+        color: #334155;
+        margin-top: 15px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .back-home-btn {
+        margin-top: 30px;
+        padding: 12px 24px;
+        font-size: 1.2rem;
+        background-color: #1e40af;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s ease-in-out;
+    }
+
+    .back-home-btn:hover {
+        background-color: #1e3a8a;
+    }
+</style>
+
+<div class="maintenance-container">
+    <img src="{% static 'img/maintenance.jpg' %}" alt="Under Maintenance">
+    <h1 class="maintenance-title">Faqja është në mirëmbajtje</h1>
+    <p class="maintenance-text">
+        Po punojmë për të përmirësuar shërbimin tonë. Ju lutemi kthehuni më vonë! 🚀<br>
+    </p>
+    <a href="{% url 'index' %}" class="back-home-btn">Kthehu në Faqen Kryesore</a>
+</div>
+
+<!-- Footer -->
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-3">Laviva Technologies</h3>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+
+{% endblock %}

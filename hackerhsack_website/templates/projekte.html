@@ -1,0 +1,329 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projektet - Laviva Technologies{% endblock %}
+
+{% block content %}
+
+<style>
+    /* General Styles */
+    body {
+        background-color: #d3e5ee;
+        font-family: "Arial", sans-serif;
+    }
+
+    .projects-header {
+        color: #004080;
+        text-align: center;
+        padding: 80px 20px 60px; /* Increased padding to move text lower */
+        margin-bottom: 30px;
+    }
+    
+    .projects-header h1 {
+        font-size: 55px; /* Increased font size */
+        font-weight: bold;
+    }
+    
+    .projects-header p {
+        font-size: 22px; /* Increased font size */
+        margin-top: 15px; /* Adds space between title and text */
+        color: #2c3e50;
+    }
+    
+
+    .project {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #004080;
+    }
+
+    .project-description {
+        font-size: 18px;
+        color: #2c3e50;
+        margin-top: 10px;
+    }
+
+    .project-images {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .project-images img {
+        width: 48%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .project-images {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project-images img {
+            width: 100%;
+        }
+    }
+</style>
+
+<!-- Page Header -->
+<div class="projects-header">
+    <h1 style="color: #004080;">Projektet Tona</h1>
+    <p style="color: #2c3e50;">Shërbime profesionale të instalimit të sistemeve të kondicionimit.</p>
+</div>
+
+
+<!-- Projects Section -->
+<div class="container">
+
+    <!-- Project 1 -->
+    <div class="project">
+        <h2 class="project-title">Instalimi i Sistemit të Kondicionimit të Dhomës së Serverave</h2>
+        <p class="project-description">
+            Laviva Technologies instaloi një sistem Vivax Highwall 3.5kw për të siguruar temperaturën optimale 
+            në dhomën e serverit të Microtech Computer Systems. Ky instalim u bë me shpejtësi për të parandaluar 
+            mbinxehjen e pajisjeve kritike.
+        </p>
+        <div class="project-images">
+            <img src="{% static 'img/microtech1.jpg' %}" alt="Microtech - Foto 1">
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+        <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Doganën Pogradec</h2>
+        <p class="project-description">
+            Pas fitimit të një gare publike, Laviva Technologies instaloi 8 sisteme të kondicionimit Vivax në 
+            ambientet e doganës. Instalimi u realizua brenda 24 orëve, duke siguruar një ambient të rehatshëm dhe 
+            efikas energjetik.
+        </p>
+        <div class="project-images">
+            <img src="{% static 'img/dogana1.jpg' %}" alt="Dogana Pogradec - Foto 1">
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+        <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Drejtorinë e Trupit Diplomatik</h2>
+        <p class="project-description">
+            Instalimi i 6 sistemeve të kondicionimit Vivax për Drejtorinë e Trupit Diplomatik në Tiranë. 
+            Specialistët tanë montuan pajisjet dhe hoqën kondicionerët e vjetër duke përmirësuar shpërndarjen 
+            e ajrit në të gjithë ambientin.
+        </p>
+        <div class="project-images">
+            <img src="{% static 'img/trupi_diplomatik1.jpg' %}" alt="Trupi Diplomatik - Foto 1">
+        </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project">
+        <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Universitetin Politeknik të Tiranës</h2>
+        <p class="project-description">
+            Laviva Technologies realizoi montimin e një kondicioneri të fuqishëm Kolonë 55BTU për Universitetin 
+            Politeknik të Tiranës, duke siguruar një ambient të freskët për studentët dhe stafin akademik.
+        </p>
+        <div class="project-images">
+            <img src="{% static 'img/universiteti1.png' %}" alt="Universiteti Politeknik - Foto 1">
+        </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project">
+        <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Bashkinë Elbasan</h2>
+        <p class="project-description">
+            Instalimi i kondicionerëve ACP – 12CH35AEQI dhe ACP-18CH50AEQIs R32 për të përmirësuar ndjeshëm 
+            klimën e brendshme të zyrave të Bashkisë Elbasan.
+        </p>
+        <div class="project-images">
+            <img src="{% static 'img/bashkia_elbasan1.png' %}" alt="Bashkia Elbasan - Foto 1">
+        </div>
+    </div>
+
+        <!-- Project 6 -->
+        <div class="project">
+            <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Gjykatën e Rrethit Dibër</h2>
+            <p class="project-description">
+                Instalimi i 5 sistemeve të kondicionimit për të siguruar mbulim optimal të ajrit në Gjykatën e Rrethit Dibër. 
+                Pajisjet e reja Vivax u montuan në mënyrë strategjike për të përmirësuar ndjeshëm efikasitetin energjetik.
+            </p>
+            <div class="project-images">
+                <img src="{% static 'img/gjykata_diber1.jpg' %}" alt="Gjykata Dibër - Foto 1">
+            </div>
+        </div>
+    
+        <!-- Project 7 -->
+        <div class="project">
+            <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Bashkinë Dropull</h2>
+            <p class="project-description">
+                Laviva Technologies instaloi 3 sisteme kondicionimi mural në Bashkinë Dropull, duke përdorur modele Vivax 
+                për një performancë më të mirë dhe konsum më të ulët të energjisë.
+            </p>
+            <div class="project-images">
+                <img src="{% static 'img/bashkia_dropull1.jpg' %}" alt="Bashkia Dropull - Foto 1">
+            </div>
+        </div>
+    
+        <!-- Project 8 -->
+        <div class="project">
+            <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Qendrën Shëndetësore Krujë</h2>
+            <p class="project-description">
+                Pas fitimit të një tenderi publik, u instaluan 3 sisteme kondicionimi Vivax në Qendrën Shëndetësore 
+                Krujë, duke përmirësuar ndjeshëm komoditetin për pacientët dhe stafin.
+            </p>
+            <div class="project-images">
+                <img src="{% static 'img/qendra_kruje1.jpg' %}" alt="Qendra Krujë - Foto 1">
+            </div>
+        </div>
+    
+        <!-- Project 9 -->
+        <div class="project">
+            <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Gjykatën e Shkallës së Parë Durrës</h2>
+            <p class="project-description">
+                Instalimi i 2 sistemeve të reja të kondicionimit mural 24 BTU për të siguruar një klimë optimale në ambientet 
+                e punës së Gjykatës së Shkallës së Parë në Durrës.
+            </p>
+            <div class="project-images">
+                <img src="{% static 'img/gjykata_durres1.png' %}" alt="Gjykata Durrës - Foto 1">
+            </div>
+        </div>
+    
+        <!-- Project 10 -->
+        <div class="project">
+            <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Njësinë Administrative Novoselë</h2>
+            <p class="project-description">
+                U instaluan 3 sisteme kondicionimi Vivax për Njësinë Administrative Novoselë – Bashkia Vlorë, duke garantuar 
+                një ambient të freskët dhe komod për punonjësit dhe vizitorët.
+            </p>
+            <div class="project-images">
+                <img src="{% static 'img/novosele1.jpg' %}" alt="Njësia Administrative Novoselë - Foto 1">
+            </div>
+        </div>
+    
+        <!-- Project 11 -->
+        <div class="project">
+            <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Drejtorinë Rajonale të Kujdesit Shëndetësor Kukës</h2>
+            <p class="project-description">
+                Pas një rinovimi të plotë të objektit, u instaluan 14 sisteme të kondicionimit Vivax në Drejtorinë Rajonale të 
+                Kujdesit Shëndetësor Kukës për një mjedis më të shëndetshëm dhe komod.
+            </p>
+            <div class="project-images">
+                <img src="{% static 'img/kukes1.jpg' %}" alt="Drejtoria Kukës - Foto 1">
+            </div>
+        </div>
+    
+        <!-- Project 12 -->
+        <div class="project">
+            <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Prokurorinë Berat</h2>
+            <p class="project-description">
+                U montuan 14 sisteme kondicionimi Vivax për të përmirësuar kushtet e punës në ambientet e Prokurorisë Berat, 
+                duke siguruar një shpërndarje të barabartë të ajrit të pastër.
+            </p>
+            <div class="project-images">
+                <img src="{% static 'img/prokuroria_berat1.png' %}" alt="Prokuroria Berat - Foto 1">
+            </div>
+        </div>
+    
+        <!-- Project 13 -->
+        <div class="project">
+            <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Prokurorinë Durrës</h2>
+            <p class="project-description">
+                Instalimi i 6 sistemeve të kondicionimit në Prokurorinë e Rrethit Durrës, duke siguruar një ambient 
+                të përshtatshëm për punonjësit dhe qytetarët.
+            </p>
+            <div class="project-images">
+                <img src="{% static 'img/prokuroria_durres1.png' %}" alt="Prokuroria Durrës - Foto 1">
+            </div>
+        </div>
+    
+        <!-- Project 14 -->
+        <div class="project">
+            <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Qendrën e Transferimit të Teknologjive Bujqësore Korçë</h2>
+            <p class="project-description">
+                Laviva Technologies instaloi 2 kondicionerë tokësorë për të siguruar një ambient optimal në Qendrën e Transferimit 
+                të Teknologjive Bujqësore Korçë.
+            </p>
+            <div class="project-images">
+                <img src="{% static 'img/qttb_korce1.png' %}" alt="QTTB Korçë - Foto 1">
+            </div>
+        </div>
+        
+            <!-- Project 15 -->
+    <div class="project">
+        <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Universitetin Politeknik të Tiranës</h2>
+        <p class="project-description">
+            Laviva Technologies realizoi montimin e një kondicioneri të fuqishëm Kolonë 55BTU për Universitetin 
+            Politeknik të Tiranës, duke siguruar një ambient të freskët për studentët dhe stafin akademik.
+        </p>
+        <div class="project-images">
+            <img src="{% static 'img/universiteti1.png' %}" alt="Universiteti Politeknik - Foto 1">
+        </div>
+    </div>
+
+    <!-- Project 16 -->
+    <div class="project">
+        <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Bashkinë Elbasan</h2>
+        <p class="project-description">
+            Instalimi i kondicionerëve ACP – 12CH35AEQI dhe ACP-18CH50AEQIs R32 për të përmirësuar ndjeshëm 
+            klimën e brendshme të zyrave të Bashkisë Elbasan.
+        </p>
+        <div class="project-images">
+            <img src="{% static 'img/bashkia_elbasan1.png' %}" alt="Bashkia Elbasan - Foto 1">
+        </div>
+    </div>
+
+    <!-- Project 17 -->
+    <div class="project">
+        <h2 class="project-title">Instalimi i Sistemit të Kondicionimit në Qendrën Shëndetësore Nr. 7</h2>
+        <p class="project-description">
+            Ekipi i specializuar i Laviva Technologies ka kryer me sukses montimin e dy kondicionerëve 
+            ACP-12CH35AESI/I+ O PRO në ambientet e Qendrës Shëndetësore Nr. 7, duke siguruar një klimë optimale për pacientët dhe stafin.
+        </p>
+        <div class="project-images">
+            <img src="{% static 'img/qendra_shendetesore7_1.png' %}" alt="Qendra Shëndetësore Nr. 7 - Foto 1">
+        </div>
+    </div>
+</div>
+
+    </div>
+    
+
+</div>
+
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-4">Laviva Technologies</h3>
+        <p><strong>Kontakt:</strong></p>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+
+
+{% endblock %}

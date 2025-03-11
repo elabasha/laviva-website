@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title %} Si të Mbroheni nga Hakerat: Sulmet Kibernetike {% endblock %}
+{% load static %}
+{% block content %}
+
+<style>
+    body {
+        background-color: #ECFBFE;
+        font-family: "Arial", sans-serif;
+    }
+
+    .content-wrapper {
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 900px;
+        margin: 40px auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    .content-image {
+        display: block;
+        margin: 30px auto;
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-text {
+        text-align: justify;
+        line-height: 1.8;
+        font-size: 18px;
+        color: #2c3e50;
+        margin: 20px 0;
+    }
+
+    .content-list {
+        padding-left: 25px;
+    }
+
+    .content-list li {
+        margin-bottom: 15px;
+    }
+
+    /* Decorative Asterisk */
+    .decorative-symbol {
+        text-align: center;
+        font-size: 28px;
+        color: #6c757d;
+        margin-top: 50px;
+    }
+
+</style>
+
+<!-- Main Content -->
+<div class="content-wrapper">
+    <h1>Si të Mbroheni nga Hakerat: Sulmet Kibernetike</h1>
+
+    <!-- Image -->
+    <img src="{% static 'img/slide33.jpg' %}" alt="Si të Mbroheni nga Hakerat" class="content-image">
+
+    <!-- Content -->
+    <div class="content-text">
+        <p>Sulmet kibernetike janë një kërcënim serioz për sigurinë e informacionit, prandaj është e rëndësishme të merrni masa për të mbrojtur veten nga hakerat. Këtu janë disa hapa thelbësorë për të siguruar sistemin tuaj nga kërcënimet e mundshme:</p>
+
+        <ul class="content-list">
+            <li><strong>Përdorni Fjalëkalime të Forta:</strong> Zgjidhni një kombinim të shkronjave të mëdha dhe të vogla, numrave dhe karaktereve speciale për të rritur sigurinë.</li>
+
+            <li><strong>Aktivizoni Autentifikimin me Dy-Faktorë (2FA):</strong> Kjo metodë sigurie kërkon një hap shtesë verifikimi për të parandaluar aksesin e paautorizuar.</li>
+
+            <li><strong>Përditësoni Rregullisht Softuerët:</strong> Sistemet operative dhe aplikacionet duhet të përditësohen vazhdimisht për të parandaluar sulmet përmes dobësive të njohura.</li>
+
+            <li><strong>Përdorni Software të Sigurisë:</strong> Një antivirus i përditësuar ndihmon në identifikimin dhe eliminimin e kërcënimeve para se ato të ndikojnë në sistemin tuaj.</li>
+
+            <li><strong>Siguroni Rrjetin tuaj Wi-Fi:</strong> Përdorni një fjalëkalim të fortë dhe aktivizoni kriptimin WPA2 për të parandaluar aksesin e paautorizuar.</li>
+        </ul>
+    </div>
+
+    <!-- Decorative Symbol -->
+    <p class="decorative-symbol">❋</p>
+
+    <!-- Final Paragraph -->
+    <div class="content-text">
+        <p>Duke zbatuar këto masa, mund të reduktoni rrezikun e sulmeve kibernetike dhe të mbani të dhënat tuaja të sigurta. Mbrojtja kibernetike kërkon një përpjekje të vazhdueshme dhe ndërgjegjësim nga të gjithë përdoruesit dhe bizneset.</p>
+    </div>
+</div>
+
+
+
+{% endblock %}

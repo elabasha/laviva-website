@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}  
+
+{% block title %} Security Systems {% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #C8DBE5;
+    }
+
+    .content-wrapper {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .shop-title {
+        text-align: center;
+        font-size: 3rem;
+        color: #2c3e50;
+        margin-top: 40px;
+        font-weight: bold;
+    }
+
+    /* Product Sections */
+    .product-section {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .product-section h2 {
+        font-size: 2.2rem;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    /* Product Grid */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    /* Product Card */
+    .product-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .product-card:hover {
+        transform: scale(1.05);
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 150px; 
+        object-fit: contain; 
+        border-radius: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 1.5rem;
+        color: #004080;
+        margin-top: 15px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .shop-title {
+            font-size: 2.5rem;
+        }
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<h1 class="shop-title">Security Systems</h1>
+
+<!-- Security Cameras -->
+<div class="product-section">
+    <h2>Security Cameras</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="{% static 'img/audio_indoor_turret.png' %}" alt="Audio Indoor Fixed Turret Camera">
+            <h3>Audio Indoor Fixed Turret Camera</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/fixed_bullet.png' %}" alt="Fixed Bullet Camera">
+            <h3>Fixed Bullet Camera</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/smart_hybrid_turret.png' %}" alt="Smart Hybrid Light Audio Fixed Turret Camera">
+            <h3>Smart Hybrid Light Audio Fixed Turret Camera</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/colorvu_mini_bullet.png' %}" alt="ColorVu Audio Fixed Mini Bullet Camera">
+            <h3>ColorVu Audio Fixed Mini Bullet Camera</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/vandal_varifocal_dome.png' %}" alt="Vandal PoC Motorized Varifocal Dome">
+            <h3>Vandal PoC Motorized Varifocal Dome</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/colorvu_smart_turret.png' %}" alt="ColorVu Smart Hybrid Light Indoor Fixed Turret Camera">
+            <h3>ColorVu Smart Hybrid Light Indoor Fixed Turret Camera</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/colorvu_poc_bullet.png' %}" alt="ColorVu Dual-light PoC Bullet Camera">
+            <h3>ColorVu Dual-light PoC Bullet Camera</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/colorvu_hybrid_dome.png' %}" alt="ColorVu with Smart Hybrid Light Fixed Dome Network Camera">
+            <h3>ColorVu with Smart Hybrid Light Fixed Dome Network Camera</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/acusense_bullet.png' %}" alt="AcuSense Fixed Bullet Network Camera">
+            <h3>AcuSense Fixed Bullet Network Camera</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/fisheye_camera.png' %}" alt="Fisheye Network Camera 360° 0-blind zone image">
+            <h3>Fisheye Network Camera 360° 0-blind zone image</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Alarm Systems -->
+<div class="product-section">
+    <h2>Alarm Systems</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="{% static 'img/infrared_motion.png' %}" alt="High-Performance Infrared Motion Detector">
+            <h3>High-Performance Infrared Motion Detector</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/dual_pir.png' %}" alt="Dual Element Digital PIR Motion Detector">
+            <h3>Dual Element Digital PIR Motion Detector</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/ceiling_motion.png' %}" alt="360° Ceiling Mounted Digital Motion Detector">
+            <h3>360° Ceiling Mounted Digital Motion Detector</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/anti_masking_pir.png' %}" alt="ANTI-MASKING Double Sensor P.I.R. Detector">
+            <h3>ANTI-MASKING Double Sensor P.I.R. Detector</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/video_doorbell.png' %}" alt="Video FHD/HiFi Audio WiFi Doorbell">
+            <h3>Video FHD/HiFi Audio WiFi Doorbell</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/high_security_motion.png' %}" alt="Outdoor High-Security Digital Motion Detector">
+            <h3>Outdoor High-Security Digital Motion Detector</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/lcd_keypad.png' %}" alt="Touch Sense LCD Keypad">
+            <h3>Touch Sense LCD Keypad</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/touch_screen.png' %}" alt="Touch Screen Keyboard">
+            <h3>Touch Screen Keyboard</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Fire Systems -->
+<div class="product-section">
+    <h2>Fire Systems</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="{% static 'img/fire_panel_2_8.png' %}" alt="Fire Alarm Control Panel (2-8 zones)">
+            <h3>Fire Alarm Control Panel (2-8 zones)</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/fire_panel_4_8.png' %}" alt="Fire Alarm Control Panel (4-8 zones)">
+            <h3>Fire Alarm Control Panel (4-8 zones)</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/conventional_panel.png' %}" alt="Conventional Panel (24 zones)">
+            <h3>Conventional Panel (24 zones)</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/conventional_smoke.png' %}" alt="Conventional Smoke Detector">
+            <h3>Conventional Smoke Detector</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/conventional_hand.png' %}" alt="Conventional Hand">
+            <h3>Conventional Hand</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/conventional_control.png' %}" alt="Conventional Control Panels">
+            <h3>Conventional Control Panels</h3>
+    </div>
+</div>
+
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-4">Laviva Technologies</h3>
+        <p><strong>Kontakt:</strong></p>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+
+
+{% endblock %}

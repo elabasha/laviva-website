@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+
+{% block title %} Blog {% endblock %}
+
+{% block content %} 
+
+{% load static %}
+
+<style>
+  body {
+      background-color: #C8DBE5;
+  }
+
+  .content-wrapper {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+  }
+
+  /* Blog Header */
+  .blog-header {
+      text-align: center;
+      padding: 80px 20px 50px;
+  }
+
+  .blog-header h1 {
+      font-size: 50px;
+      font-weight: bold;
+      color: #004080;
+      margin-bottom: 10px;
+  }
+
+  .blog-header p {
+      font-size: 22px;
+      color: #2c3e50;
+  }
+
+  /* Carousel */
+  .carousel-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 50px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .carousel-slide {
+      display: none;
+      position: relative;
+      width: 100%;
+      height: 550px; /* Increased image height */
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+  }
+
+  .carousel-slide.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  /* Text inside image */
+  .carousel-content {
+      color: white;
+      text-align: center;
+      width: 80%;
+  }
+
+  .carousel-content p {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+  .carousel-btn {
+      background-color: #004080;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.3s ease-in-out;
+      display: inline-block;
+      margin-top: 10px;
+  }
+
+  .carousel-btn:hover {
+      background-color: #002b50;
+  }
+
+  /* Carousel Controls - Moved Inside Image */
+  .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+  }
+
+  .carousel-button {
+      background: none; /* Removed grey background */
+      color: white;
+      border: none;
+      font-size: 35px;
+      cursor: pointer;
+      transition: opacity 0.3s ease-in-out;
+  }
+
+  .carousel-button:hover {
+      opacity: 0.7;
+  }
+
+  @media (max-width: 768px) {
+      .carousel-slide {
+          height: 400px; /* Adjusted for mobile */
+      }
+
+      .carousel-content p {
+          font-size: 22px;
+      }
+
+      .carousel-btn {
+          font-size: 16px;
+          padding: 10px 14px;
+      }
+
+      .carousel-button {
+          font-size: 25px;
+      }
+  }
+</style>
+
+<!-- Blog Header -->
+<div class="blog-header">
+    <h1>Blogu Ynë</h1>
+    <p>Zbuloni informacione të rëndësishme dhe kuriozitete nga fusha e teknologjisë.</p>
+</div>
+
+<!-- Carousel -->
+<div class="carousel-container">
+    <div class="carousel-slide active" style="background-image: url('{% static "img/blogggg.png" %}');">
+        <div class="carousel-content">
+            <p>11 KURIOZITETE QE NUK I DINI</p>
+            <a href="{% url 'slide1' %}" class="carousel-btn">Më shumë</a>
+        </div>
+    </div>
+    <div class="carousel-slide" style="background-image: url('{% static "img/blogggg.png" %}');">
+        <div class="carousel-content">
+            <p>Rëndësia e përdorimit të sistemit të sigurisë 24/7</p>
+            <a href="{% url 'slide2' %}" class="carousel-btn">Më shumë</a>
+        </div>
+    </div>
+    <div class="carousel-slide" style="background-image: url('{% static "img/blogggg.png" %}');">
+        <div class="carousel-content">
+            <p>Si të mbroheni nga Hakerat: sulmet kibernetike</p>
+            <a href="{% url 'slide3' %}" class="carousel-btn">Më shumë</a>
+        </div>
+    </div>
+    <div class="carousel-slide" style="background-image: url('{% static "img/blogggg.png" %}');">
+      <div class="carousel-content">
+          <p>Kuriozitete interesante rreth parkimit</p>
+          <a href="{% url 'slide4' %}" class="carousel-btn">Më shumë</a>
+      </div>
+  </div>
+  <div class="carousel-slide" style="background-image: url('{% static "img/blogggg.png" %}');">
+    <div class="carousel-content">
+        <p>Pse është e rëndësishme të kesh një website profesional?</p>
+        <a href="{% url 'slide5' %}" class="carousel-btn">Më shumë</a>
+    </div>
+</div>
+<div class="carousel-slide" style="background-image: url('{% static "img/blogggg.png" %}');">
+  <div class="carousel-content">
+      <p>Si të zgjidhni kondicionerin e duhur për shtëpinë tuaj</p>
+      <a href="{% url 'slide6' %}" class="carousel-btn">Më shumë</a>
+  </div>
+</div>
+
+    <!-- Carousel Controls Inside Image -->
+    <div class="carousel-controls">
+        <button class="carousel-button" id="prev">&#9664;</button>
+        <button class="carousel-button" id="next">&#9654;</button>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentSlide = 0;
+        let interval;
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            slides[currentSlide].style.display = "none";
+
+            currentSlide = (index + slides.length) % slides.length;
+
+            slides[currentSlide].classList.add('active');
+            slides[currentSlide].style.display = "flex";
+        }
+
+        function showNextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function showPrevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        function startAutoSlide() {
+            interval = setInterval(showNextSlide, 3000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(interval);
+        }
+
+        nextButton.addEventListener('click', () => {
+            stopAutoSlide();
+            showNextSlide();
+            startAutoSlide();
+        });
+
+        prevButton.addEventListener('click', () => {
+            stopAutoSlide();
+            showPrevSlide();
+            startAutoSlide();
+        });
+
+        startAutoSlide();
+    });
+</script>
+
+<!-- Footer -->
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-4">Laviva Technologies</h3>
+        <p><strong>Kontakt:</strong></p>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+
+{% endblock %}

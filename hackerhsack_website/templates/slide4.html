@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}Kuriozitete interesante rreth parkimit{% endblock %}
+{% load static %}
+{% block content %}
+
+<style>
+    body {
+        background-color: #FBF8F2;
+        font-family: "Arial", sans-serif;
+    }
+
+    .content-wrapper {
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 900px;
+        margin: 40px auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    .content-image {
+        display: block;
+        margin: 30px auto;
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-text {
+        text-align: justify;
+        line-height: 1.8;
+        font-size: 18px;
+        color: #2c3e50;
+        margin: 20px 0;
+    }
+
+    .content-list {
+        padding-left: 25px;
+    }
+
+    .content-list li {
+        margin-bottom: 15px;
+    }
+
+    /* Decorative Asterisk */
+    .decorative-symbol {
+        text-align: center;
+        font-size: 28px;
+        color: #6c757d;
+        margin-top: 50px;
+    }
+
+</style>
+
+<!-- Main Content -->
+<div class="content-wrapper">
+    <h1>Kuriozitete interesante rreth parkimit</h1>
+
+    <!-- Image -->
+    <img src="{% static 'img/slide4.png' %}" alt="Kuriozitete interesante rreth parkimit" class="content-image">
+
+    <!-- Content -->
+    <div class="content-text">
+        <p>Parkimi është një nga pjesët më të rëndësishme të jetës urbane. Nga parkometrat e parë e deri te sistemet moderne të parkimit automatike, teknologjia ka evoluar ndjeshëm për të bërë parkimin më të lehtë dhe efikas. Më poshtë janë disa fakte interesante për parkimin:</p>
+
+        <ul class="content-list">
+            <li><strong>Parkimi i parë në botë me pagesë:</strong> U krijua në vitin 1935 në Oklahoma City, SHBA, duke ndihmuar në menaxhimin e hapësirave publike.</li>
+
+            <li><strong>Parkimi robotik:</strong> Tokio dhe Dubai kanë sisteme parkimi robotike që përdorin platforma të automatizuara për të parkuar automjetet.</li>
+
+            <li><strong>Shpejtësia e sistemeve moderne:</strong> Disa parkime automatike mund të vendosin ose të nxjerrin një makinë brenda 2 minutave.</li>
+
+            <li><strong>Parkimet më të mëdha në botë:</strong> Kompleksi më i madh ndodhet në West Edmonton Mall, Kanada, me mbi 20,000 hapësira parkimi.</li>
+
+            <li><strong>Parkimi me energji të rinovueshme:</strong> Disa parkime në Gjermani dhe SHBA përdorin panele diellore për ndriçim dhe karikimin e makinave elektrike.</li>
+
+            <li><strong>Parkime për biçikleta:</strong> Japonia ka sisteme të parkimit nëntokësor për biçikleta që kursejnë hapësirë në qytete të mbipopulluara.</li>
+
+            <li><strong>Shpenzimet globale për parkim:</strong> Në Nju Jork dhe Londër, parkimi mund të kushtojë më shumë se qiraja mujore e një apartamenti të vogël!</li>
+
+            <li><strong>Hapësira mesatare e parkimit:</strong> Një vend parkimi zakonisht është 8-10 metra i gjerë dhe 18-20 këmbë i gjatë.</li>
+
+            <li><strong>Deri në 68% të hapësirave në qytete janë të dedikuara për parkim:</strong> Kjo ka një ndikim të madh në planifikimin urban.</li>
+
+            <li><strong>Parkingjet më të mëdha:</strong> Shumica ndodhen në aeroportet e Seattle, Chicago dhe Detroit.</li>
+        </ul>
+    </div>
+
+    <!-- Decorative Symbol -->
+    <p class="decorative-symbol">❋</p>
+</div>
+
+{% endblock %}

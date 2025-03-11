@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block title %}Pse është e rëndësishme të kesh një website profesional?{% endblock %}
+{% load static %}
+{% block content %}
+
+<style>
+    body {
+        background-color: #EEF8FE;
+        font-family: "Arial", sans-serif;
+    }
+
+    .content-wrapper {
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        max-width: 900px;
+        margin: 40px auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        font-weight: bold;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    .content-image {
+        display: block;
+        margin: 30px auto;
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-text {
+        text-align: justify;
+        line-height: 1.8;
+        font-size: 18px;
+        color: #2c3e50;
+        margin: 20px 0;
+    }
+
+    .content-list {
+        padding-left: 25px;
+    }
+
+    .content-list li {
+        margin-bottom: 15px;
+    }
+
+    .fun-facts {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #F0F7FF;
+        border-left: 5px solid #004080;
+        border-radius: 8px;
+    }
+
+    .fun-facts h3 {
+        color: #004080;
+        font-size: 24px;
+    }
+
+    /* Decorative Asterisk */
+    .decorative-symbol {
+        text-align: center;
+        font-size: 28px;
+        color: #6c757d;
+        margin-top: 50px;
+    }
+
+</style>
+
+<!-- Main Content -->
+<div class="content-wrapper">
+    <h1>Pse është e rëndësishme të kesh një website profesional?</h1>
+
+    <!-- Image -->
+    <img src="{% static 'img/slide5.jpg' %}" alt="Website profesional" class="content-image">
+
+    <!-- Content -->
+    <div class="content-text">
+        <p>Një faqe interneti është pasqyra e një biznesi në botën dixhitale. Në një epokë ku shumica e konsumatorëve kërkojnë informacion online përpara se të marrin një vendim blerjeje, një website profesional është çelësi për suksesin e një biznesi. Ja disa arsye pse duhet të keni një website të dizajnuar mirë dhe funksional:</p>
+
+        <ul class="content-list">
+            <li><strong>Përfaqësim i Biznesit në Internet:</strong> Një faqe interneti e bën biznesin tuaj të aksesueshëm 24/7 dhe ofron informacion të qartë për produktet dhe shërbimet tuaja.</li>
+
+            <li><strong>Rrit Vizibilitetin e Markës:</strong> Një website profesional ndihmon në krijimin e një imazhi të besueshëm dhe rrit njohjen e markës suaj në treg.</li>
+
+            <li><strong>Shitje dhe Shërbime 24/7:</strong> Përdoruesit mund të vizitojnë faqen tuaj dhe të kryejnë blerje ose të kontaktojnë kompaninë tuaj në çdo kohë.</li>
+
+            <li><strong>Përvoja e Përdoruesit:</strong> Një dizajn modern dhe intuitiv ndihmon vizitorët të navigojnë faqen me lehtësi dhe të gjejnë informacionin që kërkojnë.</li>
+
+            <li><strong>Optimizimi për SEO dhe Media Sociale:</strong> Një faqe e optimizuar ndihmon që biznesi juaj të shfaqet në rezultatet e Google dhe të lidhet me platformat sociale për një shtrirje më të madhe.</li>
+
+            <li><strong>Mundësi për Marketing Dixhital:</strong> Me një website mund të drejtoni fushata marketingu, të promovoni oferta dhe të angazhoni klientët në mënyrë efektive.</li>
+        </ul>
+
+        <!-- Fun Facts Section -->
+        <div class="fun-facts">
+            <h3>Fun Facts për Website-et dhe Teknologjinë</h3>
+            <ul class="content-list">
+                <li><strong>Origjina e Website-ve:</strong> Faqja e parë në internet u krijua nga Tim Berners-Lee në vitin 1991.</li>
+                <li><strong>Përdorimi i Video-ve në Website:</strong> Video-t mund të rrisin angazhimin dhe shitjet me deri në 80%.</li>
+                <li><strong>Rritja e E-commerce:</strong> Shitjet online pritet të arrijnë mbi 6.3 trilionë dollarë deri në vitin 2025.</li>
+                <li><strong>Siguria e Website-ve:</strong> Mbi 50% e faqeve të internetit janë sulmuar nga hakerat në vitet e fundit, duke treguar rëndësinë e sigurisë dixhitale.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Decorative Symbol -->
+    <p class="decorative-symbol">❋</p>
+</div>
+
+
+
+{% endblock %}

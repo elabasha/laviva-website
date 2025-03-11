@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load static %}  <!-- ✅ Load static files properly -->
+
+{% block title %} Shop {% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #C8DBE5;
+    }
+
+    .content-wrapper {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    /* Page Title */
+    .shop-title {
+        text-align: center;
+        font-size: 3rem;
+        color: #2c3e50;
+        margin-top: 40px;
+        font-weight: bold;
+    }
+
+    /* Product Grid */
+    .product-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    /* Product Card */
+    .product-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .product-card:hover {
+        transform: scale(1.05);
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 1.8rem;
+        color: #004080;
+        margin-top: 15px;
+    }
+
+    .product-card p {
+        color: #555;
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    .product-card a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #004080;
+        color: white;
+        font-size: 1rem;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .product-card a:hover {
+        background-color: #003060;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .shop-title {
+            font-size: 2.5rem;
+        }
+        .product-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<h1 class="shop-title">Shop</h1>
+
+<!-- Product Categories -->
+<div class="product-container">
+    <!-- Air Conditioning -->
+    <div class="product-card">
+        <img src="{% static 'img/vivax1.png' %}" alt="Air Conditioning">
+        <h3>Air Conditioning</h3>
+        <p>Sisteme të avancuara për klimatizimin e hapësirave.</p>
+        <a href="{% url 'air_conditioning' %}">Shiko më shumë</a>
+    </div>
+
+    <!-- Parking Systems -->
+    <div class="product-card">
+        <img src="{% static 'img/parkim1.webp' %}" alt="Parking Systems">
+        <h3>Access Systems</h3>
+        <p>Menaxhimi i automatizuar i parkimit me teknologji moderne.</p>
+        <a href="{% url 'parking_systems' %}">Shiko më shumë</a>
+    </div>
+
+    <!-- Security Systems -->
+    <div class="product-card">
+        <img src="{% static 'img/kamer.jpg' %}" alt="Security Systems">
+        <h3>Security Systems</h3>
+        <p>Siguria më e lartë për shtëpinë dhe biznesin tuaj.</p>
+        <a href="{% url 'security_systems' %}">Shiko më shumë</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-4">Laviva Technologies</h3>
+        <p><strong>Kontakt:</strong></p>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+
+{% endblock %}

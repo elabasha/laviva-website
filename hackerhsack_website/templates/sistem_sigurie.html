@@ -1,0 +1,130 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}HVAC Systems{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #e5f7fc;
+    }
+
+    /* Styling for the new text section */
+    .info-section {
+        text-align: center;
+        font-size: 2rem; /* Keep the font size as it is */
+        margin: 100px auto; /* Centering the section */
+        color: #333;
+        width: 60%; /* Set the width to make it narrower */
+        padding: 20px; /* Add some padding inside the box */
+    }
+
+    .info-section h3 {
+        font-size: 2rem; /* Heading size */
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .info-section p {
+        line-height: 1.6; /* Adjust line height for better text density */
+        margin-bottom: 20px;
+    }
+
+    .info-section ul {
+        list-style-type: disc; /* Change to bulleted list style */
+        padding-left: 20px; /* Indent the list items */
+        margin: 20px 0; /* Reduced margin for the list */
+    }
+
+    .info-section ul li {
+        margin-bottom: 15px; /* Reduced spacing between list items */
+    }
+
+    .info-section ul li:first-child {
+        margin-top: 20px; /* Reduced space above the first item */
+    }
+
+    .info-section ul li:last-child {
+        margin-bottom: 20px; /* Reduced space below the last list item */
+    }
+
+    /* Styling for the content boxes */
+    .content-box-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin: 40px 10%;
+    }
+
+    .content-box {
+        background-color: #f1f8ff; /* Light blue background to match the page's color palette */
+        border: 1px solid #a2c6e0; /* Soft blue border */
+        padding: 20px;
+        flex: 1;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        color: #333; /* Dark text for contrast */
+    }
+
+    .content-box h4 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        color: #243269; /* Darker blue for the headings */
+    }
+
+    .content-box ul {
+        list-style-type: disc; /* Bulleted list style */
+        padding-left: 20px; /* Indentation for list items */
+    }
+
+    .content-box ul li {
+        margin-bottom: 10px;
+        color: #555; /* Slightly darker text for the list items */
+    }
+</style>
+
+<!-- Image Section with Text Overlay -->
+<div class="image-container" style="position: relative; width: 100%; overflow: hidden; height: 400px;">
+    <!-- Full-width Image -->
+    <img src="{% static 'img/sistemiiii.webp' %}" alt="AC Systems" class="image" style="width: 100%; height: 100%; object-fit: cover;">
+    
+    <!-- Text Overlay -->
+    <div class="overlay" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2.5rem; width: auto; max-width: 50%; text-align: center; z-index: 10;">
+        <h2 style="font-size: 3rem; margin-bottom: 20px;">Sisteme Sigurie</h2>
+    </div>
+</div>
+
+
+<!-- New Text Section Below the Image -->
+<div class="info-section">
+    <p>
+        Teknologjia industriale i referohet përdorimit të sistemeve të automatizuara, sistemeve të kontrollit dhe softuerit për të optimizuar prodhimin, operacionet dhe sigurinë në mjediset e prodhimit dhe industriale. Zbatohet zakonisht në sektorë të tillë si prodhimi, nafta dhe gazi, prodhimi i energjisë dhe logjistika
+       </p>
+</div>
+
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-4">Laviva Technologies</h3>
+        <p><strong>Kontakt:</strong></p>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+{% endblock %}
+

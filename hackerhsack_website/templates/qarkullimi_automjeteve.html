@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Qarkullimi i automjeteve dhe kontrolli i aksesit{% endblock %}
+
+
+{% block content %}
+<div class="image-container">
+    <img src="{% static 'img/sistemparkimi1.jpeg' %}" alt="AC Systems" class="image">
+    <div class="overlay">
+        <h2> Qarkullimi i automjeteve dhe kontrolli i aksesit </h2>
+        <p>Në Laviva Technologies, ne ofrojmë zgjidhje të avancuara për sistemet e parkimit që ndihmojnë në menaxhimin dhe organizimin e hapësirave parkimi në mënyrë të sigurt, efikase dhe të përshtatshme. Sistemet tona përfshijnë teknologji moderne si barrierat automatike (trau), që ofrojnë kontroll të shpejtë dhe të saktë mbi hyrjen dhe daljen në hapësirat e parkimit.
+
+            Pavarësisht nëse bëhet fjalë për parkingje në qendrat tregtare, ndërtesa banimi, hapësira biznesi apo institucione publike, sistemet tona të parkimit janë të dizajnuara për të përmirësuar qarkullimin dhe për të reduktuar trafikun.
+            
+            </p>
+    </div>
+</div>
+
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-4">Laviva Technologies</h3>
+        <p><strong>Kontakt:</strong></p>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+
+{% endblock %}
+

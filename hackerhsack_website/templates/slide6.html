@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block title %}Si të zgjidhni kondicionerin e duhur për shtëpinë tuaj?{% endblock %}
+{% load static %}
+{% block content %}
+
+<style>
+    body {
+        background-color: #FEFBF1;
+        font-family: "Arial", sans-serif;
+    }
+
+    .content-wrapper {
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        max-width: 900px;
+        margin: 40px auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 42px;
+        font-weight: bold;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    .content-image {
+        display: block;
+        margin: 30px auto;
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-text {
+        text-align: justify;
+        line-height: 1.8;
+        font-size: 18px;
+        color: #2c3e50;
+        margin: 20px 0;
+    }
+
+    .content-list {
+        padding-left: 25px;
+    }
+
+    .content-list li {
+        margin-bottom: 15px;
+    }
+
+    .fun-facts {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #FDF5E6;
+        border-left: 5px solid #004080;
+        border-radius: 8px;
+    }
+
+    .fun-facts h3 {
+        color: #004080;
+        font-size: 24px;
+    }
+
+    /* Decorative Asterisk */
+    .decorative-symbol {
+        text-align: center;
+        font-size: 28px;
+        color: #6c757d;
+        margin-top: 50px;
+    }
+
+</style>
+
+<!-- Main Content -->
+<div class="content-wrapper">
+    <h1>Si të zgjidhni kondicionerin e duhur për shtëpinë tuaj?</h1>
+
+    <!-- Image -->
+    <img src="{% static 'img/slide6.webp' %}" alt="Si të zgjidhni kondicionerin e duhur për shtëpinë tuaj?" class="content-image">
+
+    <!-- Content -->
+    <div class="content-text">
+        <p>Zgjedhja e kondicionerit të duhur është një investim që ndikon drejtpërdrejt në komoditetin, kursimin e energjisë dhe mirëqenien tuaj. Për të marrë vendimin më të mirë, duhet të keni parasysh disa faktorë të rëndësishëm:</p>
+
+        <ul class="content-list">
+            <li><strong>Përcaktoni Madhësinë e Dhomës:</strong> Kondicionerët maten me kapacitetin e tyre në BTU (British Thermal Units). Për çdo 10m², rekomandohet rreth **500-600 BTU** për një ftohje efikase.</li>
+
+            <li><strong>Efikasiteti Energjetik:</strong> Modelet me teknologjinë **Inverter** kursejnë deri në **30-50% më shumë energji** sesa modelet tradicionale, duke reduktuar kostot mujore të faturave.</li>
+
+            <li><strong>Niveli i Zhurmës:</strong> Një kondicioner cilësor duhet të funksionojë pa zhurmë të tepruar, veçanërisht në dhoma gjumi apo zyra. Kontrolloni nivelin e tij të matur në **decibel (dB)**.</li>
+
+            <li><strong>Filtrimi i Ajrit dhe Higjiena:</strong> Modelet moderne vijnë me filtra të integruar që pastrojnë ajrin nga pluhuri, poleni dhe bakteret, ideale për personat me **alergji ose astmë**.</li>
+
+            <li><strong>Teknologjia Smart:</strong> Disa kondicionerë ofrojnë **kontroll të largët** përmes aplikacioneve mobile, duke ju lejuar të aktivizoni ftohjen përpara se të arrini në shtëpi.</li>
+
+            <li><strong>Ndikimi në Ambient:</strong> Nëse dëshironi një opsion më ekologjik, zgjidhni një model me **gazin R32**, i cili është **më miqësor me mjedisin** dhe ofron një efikasitet më të lartë.</li>
+        </ul>
+
+        <!-- Fun Facts Section -->
+        <div class="fun-facts">
+            <h3>Fun Facts rreth Kondicionerëve</h3>
+            <ul class="content-list">
+                <li><strong>A e dini?</strong> Kondicioneri i parë u shpik në vitin 1902 nga Willis Carrier për të kontrolluar lagështinë në një fabrikë printimi.</li>
+                <li><strong>Konsumimi i Energjisë:</strong> Në SHBA, më shumë se **12% e energjisë elektrike** të një shtëpie shkon për sistemet e ftohjes.</li>
+                <li><strong>Teknologjia Inverter vs. On/Off:</strong> Modelet Inverter **përdorin 20-30% më pak energji** sepse rregullojnë fuqinë në mënyrë automatike.</li>
+                <li><strong>Filtrimi i Ajrit:</strong> Kondicionerët modernë ndihmojnë në **parandalimin e mykut dhe lagështisë**, duke mbrojtur mobiljet dhe shëndetin tuaj.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Decorative Symbol -->
+    <p class="decorative-symbol">❋</p>
+
+    <!-- Final Paragraph -->
+    <p style="text-align: center; margin-top: 20px; font-size: 18px;">
+        Për të zgjedhur kondicionerin më të përshtatshëm, konsultohuni me Laviva Technologies dhe përfitoni nga ekspertiza jonë për rehati maksimale dhe kursim energjie!
+    </p>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,473 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Laviva Technologies{% endblock %}
+
+{% block content %} 
+
+
+
+<style>
+    body {
+        background-color: #d3e5ee;
+    }
+  
+    .content-wrapper {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    /* Video Section */
+    .video-container {
+        width: 100%;
+        height: 90vh;
+        overflow: hidden;
+    }
+
+    .video-container video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Section Headers */
+    .section-header {
+        color: #2c3e50;
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .section-subheader {
+        color: #4c6199;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    /* Card Styling */
+    .service-card {
+        background-color: #C1D8E4;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .service-card:hover {
+        transform: scale(1.05);
+    }
+
+    .service-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .section-header {
+            font-size: 32px;
+        }
+        .section-subheader {
+            font-size: 24px;
+        }
+    }
+</style>
+
+
+<!-- Video at the top of the page -->
+<div class="video-container">
+    <video autoplay muted loop style="height: 650px; width: 100%; object-fit: cover;">
+        <source src="{% static 'videos/video.mov' %}" type="video/mp4">
+    </video>    
+</div>
+
+<h2 class="text-center" style="color: #2c3e50; font-size: 50px; font-weight: bold; margin-top: 10px;">
+    Zbuloni Produktet dhe Shërbimet Tona
+</h2>
+<p class="text-center" style="color: #4c6199; font-size: 40px; margin-top: 10px;">
+    Projektim, instalim dhe mirëmbajtje për:
+</p>
+
+
+
+<div class="container text-center mt-4" style="max-width: 1400px;">
+    <!-- Row 1 -->
+    <div class="row justify-content-center">
+        <div class="col-md-3 col-sm-6 col-12 mb-4">
+            <a href="{% url 'ndertesa' %}" class="btn btn-light" style="background-color: #C1D8E4; display: block; padding: 0;">
+                <div class="img-container" style="width: 100%; padding-top: 100%; position: relative;">
+                    <img src="{% static 'img/wif.jpg' %}" alt="Sistem HVAC" class="img-fluid" style="position: absolute; top: 5%; left: 5%; width: 90%; height: 90%; object-fit: cover; border-radius: 8px;" />
+                </div>
+                <p style="color: #2c3e50; font-size: 1.6rem; margin-top: 15px;">Sisteme Ndërtesash</p>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4">
+            <a href="{% url 'sistem_sigurie' %}" class="btn btn-light" style="background-color: #C1D8E4; display: block; padding: 0;">
+                <div class="img-container" style="width: 100%; padding-top: 100%; position: relative;">
+                    <img src="{% static 'img/kamer.jpg' %}" alt="Sistem Sigurie" class="img-fluid" style="position: absolute; top: 5%; left: 5%; width: 90%; height: 90%; object-fit: cover; border-radius: 8px;" />
+                </div>
+                <p style="color: #2c3e50; font-size: 1.6rem; margin-top: 15px;">Sisteme Sigurie</p>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4">
+            <a href="{% url 'infrastruktura' %}" class="btn btn-light" style="background-color: #C1D8E4; display: block; padding: 0;">
+                <div class="img-container" style="width: 100%; padding-top: 100%; position: relative;">
+                    <img src="{% static 'img/abb.webp' %}" alt="Sistem Parkimi" class="img-fluid" style="position: absolute; top: 5%; left: 5%; width: 90%; height: 90%; object-fit: cover; border-radius: 8px;" />
+                </div>
+                <p style="color: #2c3e50; font-size: 1.6rem; margin-top: 15px;">Infrastrukturë Industriale dhe Kritike</p>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4">
+            <a href="{% url 'sherbim_website' %}" class="btn btn-light" style="background-color: #C1D8E4; display: block; padding: 0;">
+                <div class="img-container" style="width: 100%; padding-top: 100%; position: relative;">
+                    <img src="{% static 'img/kom.webp' %}" alt="Sherbime Website" class="img-fluid" style="position: absolute; top: 5%; left: 5%; width: 90%; height: 90%; object-fit: cover; border-radius: 8px;" />
+                </div>
+                <p style="color: #2c3e50; font-size: 1.6rem; margin-top: 15px;">Infrastrukturë Telekomunikacioni </p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row justify-content-center">
+        <div class="col-md-3 col-sm-6 col-12 mb-4">
+            <a href="{% url 'sherbime_automatizimi_menaxhimi' %}" class="btn btn-light" style="background-color: #C1D8E4; display: block; padding: 0;">
+                <div class="img-container" style="width: 100%; padding-top: 100%; position: relative;">
+                    <img src="{% static 'img/automatizim.webp' %}" alt="Sisteme Menaxhimi dhe Automatizimi" class="img-fluid" style="position: absolute; top: 5%; left: 5%; width: 90%; height: 90%; object-fit: cover; border-radius: 8px;" />
+                </div>
+                <p style="color: #2c3e50; font-size: 1.6rem; margin-top: 15px;">Sisteme Automatizimi</p>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4">
+            <a href="{% url 'server' %}" class="btn btn-light" style="background-color: #C1D8E4; display: block; padding: 0;">
+                <div class="img-container" style="width: 100%; padding-top: 100%; position: relative;">
+                    <img src="{% static 'img/server1.jpg' %}" alt="Sistem rezervë të energjisë dhe fuqisë" class="img-fluid" style="position: absolute; top: 5%; left: 5%; width: 90%; height: 90%; object-fit: cover; border-radius: 8px;" />
+                </div>
+                <p style="color: #2c3e50; font-size: 1.6rem; margin-top: 15px;">Dhoma Serveri</p>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4">
+            <a href="{% url 'mekanike' %}" class="btn btn-light" style="background-color: #C1D8E4; display: block; padding: 0;">
+                <div class="img-container" style="width: 100%; padding-top: 100%; position: relative;">
+                    <img src="{% static 'img/imghvac_fin.webp' %}" alt="Sistem Elektrik" class="img-fluid" style="position: absolute; top: 5%; left: 5%; width: 90%; height: 90%; object-fit: cover; border-radius: 8px;" />
+                </div>
+                <p style="color: #2c3e50; font-size: 1.6rem; margin-top: 15px;">Sisteme HVAC</p>
+            </a>
+        </div>
+        <div class="col-md-3 col-sm-6 col-12 mb-4">
+            <a href="{% url 'menaxhim_objekti' %}" class="btn btn-light" style="background-color: #C1D8E4; display: block; padding: 0;">
+                <div class="img-container" style="width: 100%; padding-top: 100%; position: relative;">
+                    <img src="{% static 'img/parkim1.webp' %}" alt="Menaxhim Objekt" class="img-fluid" style="position: absolute; top: 5%; left: 5%; width: 90%; height: 90%; object-fit: cover; border-radius: 8px;" />
+                </div>
+                <p style="color: #2c3e50; font-size: 1.6rem; margin-top: 15px;">Sisteme Parkimi</p>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* Section container */
+    .building-types-section {
+        max-width: 1000px;
+        margin: 150px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    /* Title styling */
+    .building-types-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    /* List styling */
+    .building-types-list {
+        padding-left: 20px;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        color: #333;
+    }
+
+    .building-types-list li {
+        margin-bottom: 10px;
+    }
+
+    /* Carousel container */
+    .carousel-container {
+        max-width: 500px;
+        flex: 1;
+        position: relative;
+    }
+
+    /* Ensure images fully expand in the carousel */
+    #buildingTypesCarousel {
+        width: 100%;
+        height: 350px; /* Set fixed height */
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .carousel-inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-item {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures full expansion without grey spaces */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .building-types-section {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .building-types-title {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .building-types-list {
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+
+        .carousel-container {
+            max-width: 100%;
+        }
+
+        #buildingTypesCarousel {
+            height: 300px; /* Adjusted height for mobile */
+        }
+    }
+</style>
+
+<div class="container building-types-section">
+    <!-- Building Types List -->
+    <div>
+        <h3 class="building-types-title">Llojet e Objekteve:</h3>
+        <ol class="building-types-list">
+            <li>Institucione Arsimore</li>
+            <li>Zyra</li>
+            <li>Hotele</li>
+            <li>Dyqane & Restorante</li>
+            <li>Institucione Qeveritare</li>
+            <li>Industriale</li>
+            <li>Qytete</li>
+            <li>Porte & Aeroporte</li>
+        </ol>
+    </div>
+
+    <!-- Carousel -->
+    <div id="buildingTypesCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/objekti1.jpg' %}" class="d-block w-100" alt="Building Type 1">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/objekti2.jpeg' %}" class="d-block w-100" alt="Building Type 2">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/objekti3.png' %}" class="d-block w-100" alt="Building Type 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#buildingTypesCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#buildingTypesCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+<style>
+    /* Section container */
+    .certifikimet-section {
+        max-width: 1100px;
+        margin: 150px auto 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px; /* Moves the list further right */
+    }
+
+    /* Title styling */
+    .certifikimet-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    /* List styling */
+    .certifikimet-list {
+        padding-left: 40px; /* Increased padding to move list further right */
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        color: #333;
+    }
+
+    .certifikimet-list li {
+        margin-bottom: 10px;
+    }
+
+    /* Carousel container */
+    .carousel-container {
+        max-width: 500px;
+        flex: 1;
+        position: relative;
+    }
+
+    /* Remove grey spaces and make images fully expand */
+    #certifikimetCarousel {
+        width: 100%;
+        height: 600px; /* Set height for full image expansion */
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .carousel-inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Removes grey spaces and expands fully */
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .certifikimet-section {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .certifikimet-title {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .certifikimet-list {
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            padding-left: 0; /* Reset padding for mobile */
+        }
+
+        .carousel-container {
+            max-width: 100%;
+        }
+
+        #certifikimetCarousel {
+            height: 500px; /* Adjusted height for mobile */
+        }
+    }
+</style>
+
+<div class="container certifikimet-section">
+    <!-- Carousel on the Left -->
+    <div id="certifikimetCarousel" class="carousel slide carousel-container" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/iso_14001.JPG' %}" class="d-block w-100" alt="ISO 14001-2015">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/iso_20000.JPG' %}" class="d-block w-100" alt="ISO 20000-1-2018">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/iso_27001.JPG' %}" class="d-block w-100" alt="ISO 27001-2022">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/iso_45001.JPG' %}" class="d-block w-100" alt="ISO 45001-2018">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/iso_50001.JPG' %}" class="d-block w-100" alt="ISO 50001-2018">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/iso_9001.JPG' %}" class="d-block w-100" alt="ISO 9001-2015">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#certifikimetCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#certifikimetCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Certifikimet List (Moved to the Right) -->
+    <div style="flex: 1; margin-left: 20px;"> <!-- Added margin to push list further right -->
+        <h3 class="certifikimet-title">Certifikimet:</h3>
+        <ol class="certifikimet-list">
+            <li>ISO 14001-2015</li>
+            <li>ISO 20000-1-2018</li>
+            <li>ISO 27001-2022</li>
+            <li>ISO 45001-2018</li>
+            <li>ISO 50001-2018</li>
+            <li>ISO 9001-2015</li>
+        </ol>
+    </div>
+</div>
+
+
+
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-4">Laviva Technologies</h3>
+        <p><strong>Kontakt:</strong></p>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+
+
+{% endblock %}

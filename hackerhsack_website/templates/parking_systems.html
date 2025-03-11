@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}  
+
+{% block title %} Automatic Systems {% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #C8DBE5;
+    }
+
+    .shop-title {
+        text-align: center;
+        font-size: 3rem;
+        color: #2c3e50;
+        margin-top: 40px;
+        font-weight: bold;
+    }
+
+    /* Product Sections */
+    .product-section {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .product-section h2 {
+        font-size: 2.2rem;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    .product-category {
+        font-size: 2rem;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    /* Product Grid */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Same size as your reference */
+        gap: 25px;
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    /* Product Card */
+    .product-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .product-card:hover {
+        transform: scale(1.05);
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 150px; /* ✅ Matches the height from your reference */
+        object-fit: contain; /* ✅ Ensures full image is visible without cropping */
+        border-radius: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 1.5rem;
+        color: #004080;
+        margin-top: 15px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .shop-title {
+            font-size: 2.5rem;
+        }
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<h1 class="shop-title">Access Systems</h1>
+
+<!-- Pedestrian Products -->
+<div class="product-section">
+    <h2>Pedestrian Products</h2>
+
+    <div class="product-category">Speed Gate Turnstiles</div>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="{% static 'img/slimlane.png' %}" alt="SlimLane">
+            <h3>SlimLane</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/firstlane.png' %}" alt="FirstLane">
+            <h3>FirstLane</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/smartline.png' %}" alt="SmartLine">
+            <h3>SmartLine</h3>
+        </div>
+    </div>
+
+    <div class="product-category">Tripod Turnstiles & Security Doors</div>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="{% static 'img/trilane.png' %}" alt="TriLane">
+            <h3>TriLane</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/trs.png' %}" alt="TRS">
+            <h3>TRS</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/security_doors.png' %}" alt="Security Doors">
+            <h3>Security Doors</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Vehicle Products -->
+<div class="product-section">
+    <h2>Vehicle Products</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="{% static 'img/parking_barrier.png' %}" alt="Parking Barriers">
+            <h3>Parking, Perimeter & Toll Barriers</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/long_range_barrier.png' %}" alt="Long Range Barriers">
+            <h3>Long Range Barriers</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/fenced_barrier.png' %}" alt="Fenced Barriers">
+            <h3>Fenced Barriers</h3>
+        </div>
+    </div>
+</div>
+
+<!-- High Security Products -->
+<div class="product-section">
+    <h2>High Security Products – Hostile Vehicle Mitigation</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="{% static 'img/rising_barrier.png' %}" alt="Rising Barriers">
+            <h3>Rising Barriers</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/road_blocker.png' %}" alt="Road Blockers">
+            <h3>Road Blockers & Tyre Killers</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/bollard.png' %}" alt="Bollards">
+            <h3>Bollards</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-4">Laviva Technologies</h3>
+        <p><strong>Kontakt:</strong></p>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+
+{% endblock %}

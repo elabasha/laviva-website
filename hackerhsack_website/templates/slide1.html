@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %} 11 Kuriozitete {% endblock %}
+{% load static %}
+{% block content %}
+
+<style>
+    body {
+        background-color: #FDF3EF; 
+        font-family: "Arial", sans-serif;
+    }
+
+    .content-wrapper {
+        background-color: white; 
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 900px;
+        margin: 40px auto;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    .content-image {
+        display: block;
+        margin: 30px auto;
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .content-text {
+        text-align: justify;
+        line-height: 1.8;
+        font-size: 18px;
+        color: #2c3e50;
+        margin: 20px 0;
+    }
+
+    .content-list {
+        padding-left: 25px;
+    }
+
+    .content-list li {
+        margin-bottom: 15px;
+    }
+
+    /* Decorative Asterisk */
+    .decorative-symbol {
+        text-align: center;
+        font-size: 28px;
+        color: #6c757d;
+        margin-top: 50px;
+    }
+
+</style>
+
+<!-- Main Content -->
+<div class="content-wrapper">
+    <h1>11 Kuriozitete që nuk i dini!</h1>
+
+    <!-- Image -->
+    <img src="{% static 'img/Kuriozitete1.jpg' %}" alt="11 Kuriozitete që nuk i dini!" class="content-image">
+
+    <!-- Content -->
+    <div class="content-text">
+        <ol class="content-list">
+            <li><strong>Kondicioneri i Qytetit:</strong> Disa qytete, si Dubai, përdorin një sistem “kondicioner qyteti” për të ruajtur temperatura të rehatshme në hapësira publike.</li>
+
+            <li><strong>Origjina e Kondicionerit:</strong> Kondicioneri i parë u shpik në vitin 1902 nga Willis Carrier për të kontrolluar lagështinë në një shtypshkronjë.</li>
+
+            <li><strong>Kondicionerët dhe Energjetika:</strong> Kondicionerët konsumojnë rreth 6% të energjisë globale, duke ndikuar në rritjen e kërkesës për energji.</li>
+
+            <li><strong>Sistemet e Sigurisë me Kamera:</strong> Mund të ulin krimet deri në 50%, duke ofruar mbikëqyrje të vazhdueshme dhe parandalim të krimit.</li>
+
+            <li><strong>Sistemet e Sigurisë me Sensorë:</strong> Sensorët modernë përdorin infra të kuqe për të zbuluar nxehtësinë e trupit të njeriut edhe në errësirë.</li>
+
+            <li><strong>Design i Website Ndikon në Besueshmërinë:</strong> 48% e përdoruesve gjykojnë një biznes bazuar në dizajnin e faqes së tij.</li>
+
+            <li><strong>Website me Video:</strong> Përdorimi i videove në një faqe interneti mund të rrisë angazhimin dhe konversionet me 80%.</li>
+
+            <li><strong>Efekti i Parkimit të Gjatë në Trafikun e Qytetit:</strong> 30% e trafikut urban vjen nga shoferët që kërkojnë një vend parkimi.</li>
+
+            <li><strong>Strukturat e Çelikut në Parkime:</strong> Çeliku është deri në 6 herë më i fortë se betoni dhe rrit sigurinë në parkimet shumëkatëshe.</li>
+
+            <li><strong>Sulmet Kibernetike:</strong> Çdo 39 sekonda një sulm kibernetik ndodh në botë, duke theksuar rëndësinë e sigurisë dixhitale.</li>
+
+            <li><strong>Superkompjuterët:</strong> Kompjuteri më i shpejtë në botë, Frontier, ka një kapacitet prej 1.1 exaflops, duke realizuar miliarda operacione për sekondë.</li>
+        </ol>
+    </div>
+
+    <!-- Decorative Symbol -->
+    <p class="decorative-symbol">❋</p>
+</div>
+
+
+
+{% endblock %}

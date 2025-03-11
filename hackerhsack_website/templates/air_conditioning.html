@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+{% load static %}  <!-- ✅ Load static files properly -->
+
+{% block title %} Air Conditioning {% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #C8DBE5;
+    }
+
+    .content-wrapper {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .shop-title {
+        text-align: center;
+        font-size: 3rem;
+        color: #2c3e50;
+        margin-top: 40px;
+        font-weight: bold;
+    }
+
+    /* Product Sections */
+    .product-section {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .product-section h2 {
+        font-size: 2.2rem;
+        color: #004080;
+        margin-bottom: 20px;
+    }
+
+    /* Product Grid */
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    /* Product Card */
+    .product-card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .product-card:hover {
+        transform: scale(1.05);
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 150px; /* ⬇️ Reduced size */
+        object-fit: contain; /* ✅ Ensures full image is visible without cropping */
+        border-radius: 10px;
+    }
+
+    .product-card h3 {
+        font-size: 1.5rem;
+        color: #004080;
+        margin-top: 15px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .shop-title {
+            font-size: 2.5rem;
+        }
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<h1 class="shop-title">Air Conditioning</h1>
+
+<!-- Wall Split Systems -->
+<div class="product-section">
+    <h2>Wall Split Systems</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="{% static 'img/Y_design.png' %}" alt="Y Design">
+            <h3>Y Design</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/H_plus_design.png' %}" alt="H+ Design">
+            <h3>H+ Design</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/R_plus_design.png' %}" alt="R+ Design">
+            <h3>R+ Design</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/N_design.png' %}" alt="N Design">
+            <h3>N Design</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/M_design.png' %}" alt="M Design">
+            <h3>M Design</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/Q_design.png' %}" alt="Q Design">
+            <h3>Q Design</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/X_design.png' %}" alt="X Design">
+            <h3>X Design</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Commercial Split Systems -->
+<div class="product-section">
+    <h2>Commercial Split Systems</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="{% static 'img/floor_ct_aeri.png' %}" alt="Floor Split System - CT AERI">
+            <h3>Floor Split System - CT AERI</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/floor_ceiling_cf_aeri.png' %}" alt="Floor-Ceiling Split System - CF AERI">
+            <h3>Floor-Ceiling Split System - CF AERI</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/cassette_cc_aer.png' %}" alt="Cassette Split System - CC AER">
+            <h3>Cassette Split System - CC AERI</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/duct_dt_aeri.png' %}" alt="Duct Split System - DT AERI">
+            <h3>Duct Split System - DT AERI</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/self_standing_fs_aeri.png' %}" alt="Self-Standing Floor Split System - FS AERI">
+            <h3>Self-Standing Floor Split System - FS AERI</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Multi-Split Systems -->
+<div class="product-section">
+    <h2>Multi-Split Systems</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="{% static 'img/wall_indoor_aemi.png' %}" alt="Wall Indoor Unit - AEMI">
+            <h3>Wall Indoor Unit - AEMI</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/wall_indoor_aeri.png' %}" alt="Wall Indoor Unit - AERI">
+            <h3>Wall Indoor Unit - AERI</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/floor_indoor_ct_aeri.png' %}" alt="Floor Indoor Unit - CT AERI">
+            <h3>Floor Indoor Unit - CT AERI</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/floor_ceiling_indoor_cf_aeri.png' %}" alt="Floor-Ceiling Indoor Unit - CF AERI">
+            <h3>Floor-Ceiling Indoor Unit - CF AERI</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/cassette_indoor_cc_aeri.png' %}" alt="Cassette Indoor Unit - CC AERI">
+            <h3>Cassette Indoor Unit - CC AERI</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/duct_indoor_dt_aeri.png' %}" alt="Duct Indoor Unit - DT AERI">
+            <h3>Duct Indoor Unit - DT AERI</h3>
+        </div>
+        <div class="product-card">
+            <img src="{% static 'img/outdoor_cofm_aeri.png' %}" alt="Outdoor Unit - COFM AERI">
+            <h3>Outdoor Unit - COFM AERI</h3>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="kontakt" class="text-white text-center py-5" style="background-color: #161a56;">
+    <div class="container">
+        <h3 class="text-uppercase mb-4">Laviva Technologies</h3>
+        <p><strong>Kontakt:</strong></p>
+        <p><i class="fas fa-phone-alt"></i> +355 69 204 5581</p>
+        <p><i class="fas fa-map-marker-alt"></i> Rruga At Zef Valentini, Tiranë, Albania</p>
+        <p><i class="fas fa-envelope"></i> info@laviva.al</p>
+        
+        <div class="social-icons mt-3">
+            <a href="https://www.facebook.com/people/Laviva-Technologies/61553028980069/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/laviva.technologies/" target="_blank" class="text-white mx-2">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        
+        <!-- Copyright Notice -->
+        <p class="mt-4" style="font-size: 14px; color: #d3d3d3;">
+            &copy; 2025 Laviva Technologies
+        </p>
+    </div>
+</footer>
+
+{% endblock %}

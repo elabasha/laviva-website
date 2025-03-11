@@ -1,0 +1,89 @@
+{% url 'index' as index_url %}
+{% url 'produkte-sherbime' as produkte_sherbime_url %}
+{% url 'blog' as blog_url %}
+{% url 'behupartner' as behupartner_url %}
+{% url 'shop' as shop_url %}
+{% url 'kontakt' as kontakt_url %}
+{% url 'projekte' as projekte_url %}
+
+
+<style>
+
+/* Make Laviva Technologies white */
+.navbar-brand {
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Make navbar links white */
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+/* Change navbar links color on hover */
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa !important;
+    text-decoration: underline;
+}
+
+/* Keep the active link white */
+.navbar-nav .nav-link.active {
+    color: white !important;
+    font-weight: bold;
+}
+
+</style>
+
+<nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="mainNav" style="background-color: #161a56;">
+    <div class="container">
+        <a class="navbar-brand" href="{{ index_url }}">Laviva Technologies</a>
+        <button class="navbar-toggler text-uppercase font-weight-bold lv-bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {% if request.path == index_url %}active{% endif %}" href="{{ index_url }}">Hyrje</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {% if request.path == produkte_sherbime_url %}active{% endif %}" href="{{ produkte_sherbime_url }}">Produkte & Sherbime</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {% if request.path == projekte_url %}active{% endif %}" href="{{ projekte_url }}">Projekte</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {% if request.path == blog_url %}active{% endif %}" href="{{ blog_url }}">Blog</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {% if request.path == shop_url %}active{% endif %}" href="{{ shop_url }}">Shop</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {% if request.path == behupartner_url %}active{% endif %}" href="{{ behupartner_url }}">Behu Partner</a>
+                </li>
+                <li class="nav-item mx-0 mx-lg-1">
+                    <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger {% if request.path == kontakt_url %}active{% endif %}" href="#kontakt">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Remove any other sections containing the 'Kontakt' or similar info above this footer -->
+
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>

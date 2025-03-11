@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../hackerhsack_website"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../scripts"
+		}
+	],
+	"settings": {}
+}
