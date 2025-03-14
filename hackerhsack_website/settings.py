@@ -25,9 +25,9 @@ PROJECT_DIR = os.path.join(BASE_DIR, "hackerhsack_website")
 SECRET_KEY = 'django-insecure-@c$lb7x+&gy0)#akgaj_n+z5+7$v3!85c0&jlor3=jo-emhra3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [*] 
+ALLOWED_HOSTS = ["laviva-website-production.up.railway.app", "127.0.0.1"] 
 
 
 # Application definition
@@ -127,3 +127,4 @@ STATIC_URL = os.getenv("RAILWAY_STATIC_URL", "/static/")
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
+PORT = os.getenv("PORT", "8080")
