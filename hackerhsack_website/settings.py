@@ -25,10 +25,10 @@ PROJECT_DIR = os.path.join(BASE_DIR, "hackerhsack_website")
 SECRET_KEY = 'django-insecure-@c$lb7x+&gy0)#akgaj_n+z5+7$v3!85c0&jlor3=jo-emhra3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = ["laviva-website-production.up.railway.app", "127.0.0.1"] 
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "laviva-website-production.up.railway.app,127.0.0.1").split(",")
 
 # Application definition
 
