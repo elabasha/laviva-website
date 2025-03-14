@@ -4,3 +4,4 @@ psycopg2-binary==2.9.9  # Required if using PostgreSQL
 whitenoise==6.6.0  # For serving static files
 dj-database-url==2.1.0  # If using a DATABASE_URL environment variable
 django-extensions==3.2.3
+
