@@ -127,4 +127,4 @@ STATIC_URL = os.getenv("RAILWAY_STATIC_URL", "/static/")
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
-PORT = os.getenv("PORT", "8080")
+PORT = os.getenv("PORT", "8000")
