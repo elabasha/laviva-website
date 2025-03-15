@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-@c$lb7x+&gy0)#akgaj_n+z5+7$v3!85c0&jlor3=jo-emhra3
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "laviva-website-production.up.railway.app,127.0.0.1").split(",")
+ALLOWED_HOSTS = ["django-website-patient-sun-4287.fly.dev", "localhost", "127.0.0.1"]
 
 # Application definition
 
