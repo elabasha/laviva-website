@@ -1,0 +1,389 @@
+#main {
+    padding-top: calc(74px);
+}
+
+@media (min-width: 992px) {
+    #main {
+      padding-top: calc(104px);
+    }
+}
+
+@font-face {
+    font-family: "Laviva Font";
+    src:
+    url(font/Aileron-Light.otf)
+    url(font/AlexBrush-Regular.ttf)
+}
+
+.navbar-brand {
+    font-family: 'Laviva font ';
+
+}
+
+.lv-bg-primary {
+    background-color: rgb(19, 28, 48);
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #3982d1;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
+    color: var(--bs-navbar-active-color);
+}
+
+@media (min-width: 992px) {
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+        color: #ffffff;
+        background: #ffffff;;
+    }
+
+}
+#mainNav .navbar-nav li.nav-item a.nav-link.active {
+    color: #0e0f0f;
+}
+a {
+    color: var(--bs-link-color);
+    text-decoration: underline;
+}
+@media (min-width: 992px) {
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+        color: #fff;
+        background: #191c2f;
+    }
+}
+
+.masthead {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
+}
+@media (min-width: 992px) {
+    .masthead {
+        padding-top:  16rem;
+        padding-bottom: 16rem;
+    }
+}
+
+h2 {
+    text-align: center; /* Center text */
+    font-size: 2rem; /* Adjust font size as needed */
+    margin-bottom: 40px; /* Space below the heading */
+    margin-top: 30px; /* Space above the heading (adjust as needed) */
+}
+/* Center the heading */
+
+
+/* Ensure the images are in a single row with equal spacing */
+.container .row {
+    display: flex;
+    justify-content: space-between; /* Space the images evenly */
+    flex-wrap: wrap; /* Allow the images to wrap to the next line when necessary */
+}
+
+/* Style for each image block */
+.col-md-4 {
+    text-align: center; /* Center the text below the image */
+    margin-bottom: 20px; /* Space below each image block */
+    padding: 0 10px; /* Optional: Prevent images from touching the edges */
+    flex: 0 0 23%; /* Each image will take up roughly 1/4th of the row's width */
+}
+
+/* Ensure all images have the same size and aspect ratio */
+.col-md-4 img {
+    width: 100%; /* Make images take up the full width of the container */
+    height: 200px; /* Fixed height to keep the images consistent */
+    object-fit: cover; /* Ensure the images cover the area without distortion */
+    max-width: 100%; /* Ensure images don't stretch */
+}
+
+/* Underline the text */
+.col-md-4 p {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Stack images vertically on smaller screens (below 992px) */
+@media (max-width: 991px) {
+    .col-md-4 {
+        flex: 0 0 100%; /* Each image will take up the full width on smaller screens */
+        margin-bottom: 20px; /* Keep some space between images */
+    }
+
+    /* Optional: Adjust image height on small screens */
+    .col-md-4 img {
+        height: 230px; /* Slightly increase the height on small screens for better visibility */
+    }
+}
+
+/* Ensure images are responsive */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Container to hold the image */
+.image-container {
+    position: relative;  /* Keeps the text inside positioned relative to this container */
+    width: 100%;
+    height: 60vh;  /* Increases the height to make the image and text larger vertically */
+    overflow: hidden;  /* Hides any overflowing part of the image */
+}
+
+/* Stretch the image horizontally */
+.image {
+    width: 100%;  /* Image spans the full width */
+    height: 100%;  /* Ensure the image fully covers the container */
+    object-fit: cover;  /* Ensures the image covers the container without stretching */
+}
+
+/* Overlay text */
+.overlay {
+    position: absolute;
+    top: 0%;  /* Position text starting from the top */
+    left: 5%;  /* Place the text towards the left */
+    width: 40%;  /* Set a smaller width for the text box */
+    padding: 20px;  /* Adds padding around the text */
+    color: white;
+    text-align: left;  /* Align the text to the left */
+    max-height: 100%;  /* Prevent text from overflowing out of the container */
+    overflow: auto;  /* Allow scrolling if the text overflows */
+}
+
+/* Style the heading and paragraph inside the overlay */
+.overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    line-height: 1.5;  /* Increases line spacing for better readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overlay {
+        width: 60%;  /* Adjust width on smaller screens */
+        padding: 15px;
+    }
+
+    .overlay h2 {
+        font-size: 2rem;  /* Reduce font size on smaller screens */
+    }
+
+    .overlay p {
+        font-size: 1rem;  /* Reduce font size for paragraph */
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        width: 80%;  /* Increase the width on very small screens */
+        padding: 10px;
+    }
+
+    .overlay h2 {
+        font-size: 1.5rem;  /* Further reduce heading font size */
+    }
+
+    .overlay p {
+        font-size: 0.9rem;  /* Further reduce paragraph font size */
+    }
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+
+footer .social-icons a {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ffd700;
+}
+
+
+#kontakt {
+    margin-top: 50px; /* Përshtatni në varësi të përmbajtjes */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* main.css */
+
+/* Info box styling */
+.info-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.info-box p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Square box styling */
+.square-box {
+    background-color: #e3f2fd;
+    padding: 20px;
+    border: 2px solid #64b5f6;
+    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.square-box h3 {
+    font-size: 20px;
+    color: #1976d2;
+}
+
+.square-box p {
+    font-size: 14px;
+    color: #555;
+
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s ease;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+  
+    /* Ensure background image scales nicely */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .carousel-slide.active {
+    left: 0;
+  }
+  
+  .carousel-slide.inactive {
+    left: -100%;
+  }
+  
+  .carousel-controls {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-button {
+    background: rgba(2, 67, 90, 0.5);
+    color: #C8DBE5;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5em;
+    transition: background 0.3s ease;
+  }
+  
+  .carousel-button:hover {
+    background: rgba(2, 97, 161, 0.8);
+  }
+  
+/* This is the code for the me shume button */
+
+  .carousel-content {
+    text-align: center;
+  }
+  
+  .carousel-content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .carousel-btn {
+    background-color: #C8DBE5; /* White background */
+    color: rgb(2, 76, 110); /* Black text */
+    border: 2px solid rgb(3, 34, 81); /* Add a border around the button */
+    padding: 8px 16px; /* Smaller padding to make the button smaller */
+    font-size: 1em; /* Slightly smaller text size */
+    text-decoration: none; /* Remove underline from the link */
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 4px; /* Optional: Adds rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transition */
+  }
+  
+  .carousel-btn:hover {
+    background-color: rgb(4, 67, 119); /* Dark background on hover */
+    color: rgb(249, 249, 249); /* White text on hover */
+  }
+  
+  
+
+
+
+.info-box {
+    background-color: #f9f9f9;
+    padding: 25px;  /* Slightly more padding */
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 0 auto 20px auto; /* Centers the box horizontally and adds space at the bottom */
+    width: 60%;  /* Increased width to make the box a bit bigger */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;  /* Centers the text inside the box */
+}
+
+/* Responsive Design (for smaller screens) */
+@media (max-width: 768px) {
+    .info-box {
+        width: 80%;  /* Keep the width at 80% for smaller screens */
+        padding: 20px;  /* Adjust padding for smaller screens */
+    }
+}
+
