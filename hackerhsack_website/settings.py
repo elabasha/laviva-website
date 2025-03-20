@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,13 +23,11 @@ PROJECT_DIR = os.path.join(BASE_DIR, "hackerhsack_website")
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-@c$lb7x+&gy0)#akgaj_n+z5+7$v3!85c0&jlor3=jo-emhra3'
-
-# SECURITY WARNING: don't run with debug turned on in production!
+SECRET_KEY = os.getenv("f94e1d6be74b34cc", "django-insecure-dummy-key-123456789")
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = ["django-website-patient-sun-4287.fly.dev", "localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["django-website-patient-glade-7308.fly.dev", "localhost", "127.0.0.1"]
 
 # Application definition
 
@@ -80,10 +79,11 @@ WSGI_APPLICATION = 'hackerhsack_website.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('331978b942bb96e0'),
+        conn_max_age=600,
+        ssl_require=False,
+    )
 }
 
 
@@ -123,12 +123,18 @@ USE_TZ = True
 
 
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [BASE_DIR / "hackerhsack_website/static"]  # Ensure this directory exists
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "hackerhsack_website", "static"),
+]
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
-PORT = os.getenv("PORT", "8000")
+PORT = os.getenv("PORT", "5433")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
