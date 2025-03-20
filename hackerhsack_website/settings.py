@@ -23,7 +23,7 @@ PROJECT_DIR = os.path.join(BASE_DIR, "hackerhsack_website")
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("f94e1d6be74b34cc", "django-insecure-dummy-key-123456789")
+SECRET_KEY = os.getenv("SECRET_KEY", "django-insecure-dummy-key-123456789")
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
@@ -80,11 +80,12 @@ WSGI_APPLICATION = 'hackerhsack_website.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('331978b942bb96e0'),
+        default=os.getenv('DATABASE_URL'),
         conn_max_age=600,
         ssl_require=False,
     )
 }
+
 
 
 # Password validation
@@ -135,6 +136,8 @@ PORT = os.getenv("PORT", "5433")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False  # Fly.io already handles SSL
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # Ensure Django recognizes HTTPS requests
+

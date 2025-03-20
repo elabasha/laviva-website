@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for django-website-patient-sun-4287 on 2025-03-14T13:47:06+01:00
+# fly.toml app configuration file generated for django-website-patient-glade-7308 on 2025-03-20T09:37:29+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'django-website-patient-sun-4287'
-primary_region = 'fra'
+app = 'django-website-patient-glade-7308'
+primary_region = 'otp'
 console_command = '/code/manage.py shell'
 
 [build]
