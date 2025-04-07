@@ -1,5 +1,10 @@
 
 from django.shortcuts import render 
+from django.http import JsonResponse
+from django.urls import path
+
+def health(request):
+    return JsonResponse({"status": "ok"})
 
 def index(request):
     return render(request, 'index.html')
@@ -21,9 +26,6 @@ def kontakt(request):
 
 def projekte(request):
     return render(request, 'projekte.html')  
-
-
-# from django.http import HttpResponse
 
 def security_systems(request):
     return render(request, 'security_systems.html')

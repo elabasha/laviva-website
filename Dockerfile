@@ -5,7 +5,7 @@ FROM python:${PYTHON_VERSION}
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# install psycopg2 dependencies.
+# install psycopg2 dependencies
 RUN apt-get update && apt-get install -y \
     libpq-dev \
     gcc \
@@ -25,6 +25,9 @@ COPY . /code
 ENV SECRET_KEY "NJqVtoy4jVpSK10PQ8Y7GmNd3MItkokoTc0Ur1Se1yF0SnTpiK"
 RUN python manage.py collectstatic --noinput
 
+# Set a default port if $PORT is not set
+ENV PORT 8000
+
 EXPOSE 8000
 
-CMD ["gunicorn","--bind",":8000","--workers","2","hackerhsack_website.wsgi"]
+CMD ["sh", "-c", "gunicorn --bind 0.0.0.0:${PORT} --workers 2 hackerhsack_website.wsgi"]

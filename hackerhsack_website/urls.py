@@ -1,9 +1,11 @@
 from django.contrib import admin
 from django.urls import path
+from .views import health
 
 from . import views 
 
 urlpatterns = [
+    path('health/', health, name='health'),
     path('admin/', admin.site.urls),
     path('', views.index, name="index"),
     path('produkte-sherbime/', views.produkte_sherbime, name="produkte-sherbime"),

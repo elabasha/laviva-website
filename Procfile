@@ -1,2 +1,2 @@
-web: gunicorn --bind 0.0.0.0:8000 --workers 2 hackerhsack_website.wsgi:application
+web: gunicorn --bind 0.0.0.0:$PORT --workers 4 hackerhsack_website.wsgi:application
 

@@ -4,7 +4,7 @@
 #
 
 app = 'django-website-patient-glade-7308'
-primary_region = 'otp'
+primary_region = "ams"
 console_command = '/code/manage.py shell'
 
 [build]
@@ -17,17 +17,26 @@ console_command = '/code/manage.py shell'
 
 [http_service]
   internal_port = 8000
-  force_https = true
+  force_https = false # Disable HTTPS enforcement if you don't have SSL configured
   auto_stop_machines = 'stop'
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 1
+  max_machines_running = 3
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
+  memory = '4gb'
   cpu_kind = 'shared'
-  cpus = 1
+  cpus = 2
 
 [[statics]]
   guest_path = '/code/static'
   url_prefix = '/static/'
+
+[health_checks]
+  grace_period = "30s"
+  interval = "30s"
+  timeout = "10s"
+  retries = 3
+  path = "/health"  # Ensure you have a health endpoint that responds correctly
+  port = 8000

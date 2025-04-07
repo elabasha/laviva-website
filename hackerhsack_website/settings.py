@@ -82,7 +82,7 @@ DATABASES = {
     'default': dj_database_url.config(
         default=os.getenv('DATABASE_URL'),
         conn_max_age=600,
-        ssl_require=False,
+        ssl_require=True,
     )
 }
 
@@ -136,7 +136,7 @@ PORT = os.getenv("PORT", "5433")
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-SECURE_SSL_REDIRECT = False  # Fly.io already handles SSL
+SECURE_SSL_REDIRECT = True  # Fly.io already handles SSL
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')  # Ensure Django recognizes HTTPS requests
